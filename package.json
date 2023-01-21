@@ -4,7 +4,7 @@
 	"private": true,
 	"author": "nikita.naumov@chulakov.ru",
 	"license": "ISC",
-	"packageManager": "pnpm@7.21.0",
+	"packageManager": "pnpm@7.25.0",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
