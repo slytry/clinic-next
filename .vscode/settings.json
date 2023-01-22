@@ -57,8 +57,8 @@
 			"comments": "off",
 			"strings": "off",
 			"other": "off"
-		},
-		"editor.snippetSuggestions": "none"
+		}
+		// "editor.snippetSuggestions": "none"
 	},
 	//===========================================
 	//============= Linters =====================
@@ -102,7 +102,7 @@
 		"**/.gitlab-ci.yml": true,
 		"**/docker": true,
 		"**/.storybook": true,
-		"**/.next": true,
+		"**/.next": false,
 		"**/*.log": true,
 		"**/*.log*": true,
 		"**/bower_components": true,
@@ -140,7 +140,7 @@
 		"**/.DS_Store": true,
 		"**/._.DS_Store": true,
 		"**/node_modules": true,
-		"**/.next": true,
+		"**/.next": false,
 		"**/.git": true
 	},
 	"files.watcherExclude": {
