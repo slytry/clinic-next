@@ -1,0 +1,16 @@
+$introBottomGap: 20px;
+
+.Intro {
+	border-bottom: $introBottomGap solid $light;
+	min-height: calc(100vh - #{$layoutTopPadding} + #{$introBottomGap});
+}
+
+.Image {
+	z-index: 0;
+}
+
+.CategoryList,
+.HomeBtn {
+	position: relative;
+	z-index: 1;
+}

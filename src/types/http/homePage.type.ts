@@ -1,3 +1,5 @@
+import { type } from 'os';
+
 import { type GenericResponse, type Images } from './generic.type';
 
 export interface HomePageProps {
@@ -5,6 +7,7 @@ export interface HomePageProps {
 	about: About;
 	promotion: Promotion;
 	licensen: Licensen;
+	categories: Categories;
 }
 
 export interface Contacts {
@@ -36,3 +39,14 @@ export interface Licensen {
 }
 
 export interface LicensenResponse extends GenericResponse<Licensen> {}
+
+export interface Category {
+	name: string;
+	subCategories: string[];
+}
+
+export interface Categories {
+	categories: Category[];
+}
+
+export interface CategoriesResponse extends GenericResponse<Categories> {}

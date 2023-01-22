@@ -29,4 +29,4 @@ function useBoolean(defaultValue?: boolean): UseBooleanOutput {
 	return { value, setValue, setTrue, setFalse, toggle };
 }
 
-export default useBoolean;
+export { useBoolean };
