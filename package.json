@@ -12,7 +12,7 @@
 		"format": "prettier --write .",
 		"stylelint": "stylelint \"**/*.scss\" --fix",
 		"lint": "next lint",
-		"type-check": "tsc --noEmit --skipLibCheck --target='ES2015'",
+		"type-check": "tsc --noEmit --skipLibCheck --target es2015",
 		"preinstall": "node ./scripts/preinstall.js",
 		"postinstall": "simple-git-hooks"
 	},
