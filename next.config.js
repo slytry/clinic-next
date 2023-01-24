@@ -6,7 +6,7 @@ const path = require('path');
 
 const nextConfig = {
 	reactStrictMode: false,
-	// output: 'standalone',
+	output: 'standalone',
 	swcMinify: true,
 	images: {
 		loader: 'default',
