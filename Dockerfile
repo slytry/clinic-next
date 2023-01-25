@@ -20,7 +20,7 @@ WORKDIR /home/node/app
 ENV NODE_ENV production
 
 COPY --from=builder /home/node/app/next.config.js ./
-COPY --from=builder /home/node/app/public ./public
+COPY --from=builder /home/node/app/src/public ./public
 COPY --from=builder /home/node/app/package.json ./package.json
 
 # Automatically leverage output traces to reduce image size

@@ -13,22 +13,7 @@
 		"format": "prettier --write .",
 		"stylelint": "stylelint \"**/*.scss\" --fix",
 		"lint": "next lint",
-		"type-check": "tsc --noEmit --skipLibCheck --target es2015",
-		"preinstall": "node ./scripts/preinstall.js",
-		"postinstall": "simple-git-hooks"
-	},
-	"simple-git-hooks": {
-		"pre-commit": "pnpm lint-staged",
-		"commit-msg": "node scripts/verifyCommit.mjs",
-		"pre-push": " pnpm type-check"
-	},
-	"lint-staged": {
-		"*.scss": "stylelint --fix",
-		"*.{js,json, yml}": "prettier --list-different --write",
-		"*.ts?(x)": [
-			"eslint",
-			"prettier --list-different --parser=typescript --write"
-		]
+		"type-check": "tsc --noEmit --skipLibCheck --target es2015"
 	},
 	"browserslist": {
 		"development": [
@@ -63,7 +48,8 @@
 		"react": "^18.2.0",
 		"react-burger-menu": "^3.0.9",
 		"react-dom": "^18.2.0",
-		"react-markdown": "^8.0.5"
+		"react-markdown": "^8.0.5",
+		"sharp": "^0.31.3"
 	},
 	"devDependencies": {
 		"@ecomfe/class-names-loader": "^2.0.0",
@@ -83,8 +69,6 @@
 		"postcss-scss": "^4.0.6",
 		"prettier": "^2.8.1",
 		"sass": "^1.57.1",
-		"sharp": "^0.31.3",
-		"simple-git-hooks": "^2.8.1",
 		"stylelint": "^14.16.1",
 		"stylelint-config-prettier-scss": "^0.0.1",
 		"stylelint-config-sass-guidelines": "^9.0.1",
