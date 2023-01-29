@@ -52,6 +52,7 @@ const Home = ({
 		}}
 	>
 		<HomePage />
+
 	</DataContext.Provider>
 );
 
