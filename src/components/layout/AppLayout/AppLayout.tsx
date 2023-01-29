@@ -16,7 +16,7 @@ const fontIBM = IBM_Plex_Sans({
 });
 const fontRoboto = Roboto({
 	weight: ['400', '500', '700'],
-	variable: '--next-font-Roboto',
+	variable: '--next-font-roboto',
 	subsets: ['latin', 'cyrillic'],
 });
 

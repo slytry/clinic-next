@@ -21,8 +21,6 @@ export const CircleServices = () => {
 			<ul className={s.circle}>
 				{uslugi.map((item) => {
 					if (item?.subItems) {
-						console.log(item?.subItems);
-
 						return (
 							<Circle
 								onClick={deeep}

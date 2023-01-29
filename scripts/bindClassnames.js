@@ -15,7 +15,6 @@ const bindClassnames = (config) => {
 
 		if (moduleSassRule) {
 			// Get the config object for css-loader plugin
-			console.log('resolve', require.resolve('@ecomfe/class-names-loader'));
 			moduleSassRule.use = [
 				{
 					loader: require.resolve('@ecomfe/class-names-loader'),
