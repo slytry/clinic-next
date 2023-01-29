@@ -15,7 +15,6 @@ import s from './Licensen.module.scss';
 
 export const Licensen = () => {
 	const { licensen } = useDataContext();
-	console.log();
 
 	const [currentSlide, setCurrentSlide] = useState(0);
 	const [loaded, setLoaded] = useState(false);

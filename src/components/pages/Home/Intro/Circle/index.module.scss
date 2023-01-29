@@ -1,0 +1,70 @@
+.root {
+	position: relative;
+
+	color: white;
+	border-radius: 50%;
+	cursor: pointer;
+
+	&:hover {
+		.text {
+			color: rgb(24, 91, 207);
+		}
+	}
+}
+
+.image {
+	border-radius: 50%;
+}
+
+.text {
+	width: 150px;
+	text-align: center;
+	font-size: 24px;
+	color: #000000;
+	// transform: translate(60%, 30px);
+	cursor: pointer;
+	font-style: normal;
+	font-weight: 700;
+	transition: color 0.3s;
+
+	@include respond-below(1200px) {
+		font-size: 18px;
+		transform: translate(70%, 30px);
+	}
+	@include respond-below(991px) {
+		font-size: 16px;
+		transform: translate(40%, 30px);
+		width: 140px;
+	}
+	@include respond-below(768px) {
+		font-size: 14px;
+		transform: translate(40%, 20px);
+		width: 100px;
+	}
+	@include respond-below(768px) {
+		font-size: 12px;
+		width: 70px;
+	}
+}
+
+.left {
+	transform: translate(60%, 30px);
+
+	@include respond-below(768px) {
+		transform: translate(40%, 60px);
+	}
+	@include respond-below(580px) {
+		transform: translate(0%, 40px);
+	}
+}
+
+.right {
+	transform: translate(-110%, 30px);
+
+	@include respond-below(768px) {
+		transform: translate(-60%, 70px);
+	}
+	@include respond-below(580px) {
+		transform: translate(-50%, 40px);
+	}
+}

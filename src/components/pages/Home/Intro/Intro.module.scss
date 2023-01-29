@@ -3,6 +3,13 @@ $introBottomGap: 20px;
 .Intro {
 	border-bottom: $introBottomGap solid $light;
 	min-height: calc(100vh - #{$layoutTopPadding} + #{$introBottomGap});
+
+	@include respond-below(830px) {
+		min-height: calc(60vh - #{$layoutTopPadding} + #{$introBottomGap});
+	}
+	@include respond-below(580px) {
+		min-height: calc(40vh - #{$layoutTopPadding} + #{$introBottomGap});
+	}
 }
 
 .Image {
