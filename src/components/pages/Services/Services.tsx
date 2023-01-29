@@ -1,6 +1,6 @@
 import cn from 'classnames/bind';
 
-import { Card } from '@/base/Card/Card';
+import { Card } from '@/base/Card';
 import { Heading } from '@/base/Heading';
 import { Region } from '@/base/Region';
 
