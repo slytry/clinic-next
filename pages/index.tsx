@@ -10,7 +10,6 @@ import {
 	type About,
 	type Categories,
 	type Contacts,
-	type HomePageProps,
 	type Licensen,
 	type Promotion,
 } from '@/types/http/homePage.type';

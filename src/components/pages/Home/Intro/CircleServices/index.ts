@@ -1,1 +1,1 @@
-export * from './CircleServices.tsx';
+export * from './CircleServices';

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-import intro7 from '@/public/7.png';
+// import intro7 from '@/public/7.png';
 import tea from '@/public/intro/tea.png';
 
 import { Circle } from '../Circle';
@@ -12,7 +12,7 @@ import s from './index.module.scss';
 export const CircleServices = () => {
 	const [uslugi, setUslugi] = useState(services);
 
-	const deeep = (uuu) => {
+	const deeep = (uuu: any) => {
 		setUslugi(uuu);
 	};
 
