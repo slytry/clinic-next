@@ -1,9 +1,6 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-// import intro7 from '@/public/7.png';
-import tea from '@/public/intro/tea.png';
-
 import { Circle, CircleWithIcon } from '../Circle';
 import { services } from '../constants';
 
@@ -26,7 +23,7 @@ export const CircleServices = () => {
 								onClick={deeep}
 								subItems={item.subItems}
 								key={item.id}
-								imgSrc={tea}
+								imgSrc={item.bg}
 								text={item.text}
 								rightSide={item.rightSide}
 							/>
@@ -37,7 +34,7 @@ export const CircleServices = () => {
 						<CircleWithIcon
 							href={item.href}
 							key={item.id}
-							imgSrc={tea}
+							imgSrc={item.bg}
 							text={item.text}
 							rightSide={item.rightSide}
 						/>

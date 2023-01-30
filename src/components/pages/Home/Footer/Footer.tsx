@@ -1,6 +1,6 @@
-import { BgImage } from '@/components/base/BgImage/BgImage';
+import footerBackgroundMax from 'public/bg/footerBackgroundMax.png';
 
-import footerBackgroundMax from '@/public/bg/footerBackgroundMax.png';
+import { BgImage } from '@/components/base/BgImage/BgImage';
 
 import s from './Footer.module.scss';
 

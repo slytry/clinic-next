@@ -3,9 +3,9 @@ import Link from 'next/link';
 
 import { LinkIntoView } from '@/components/base/LinkIntoView';
 
-import Logo from '@/public/icon/headerLogo.svg';
-
 import styles from './Header.module.scss';
+
+import Logo from '/public/icon/headerLogo.svg';
 
 const cx = cn.bind(styles);
 

@@ -5,8 +5,7 @@ const path = require('path');
 // const { bindClassnames } = require('./scripts/bindClassnames');
 
 const nextConfig = {
-	reactStrictMode: false,
-	output: 'standalone',
+	reactStrictMode: true,
 	swcMinify: true,
 	images: {
 		loader: 'default',

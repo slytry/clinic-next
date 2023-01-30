@@ -8,10 +8,11 @@ import { Region } from '@/components/base/Region';
 import { getMediaUrl } from '@/lib/api/getUrl';
 
 import { useDataContext } from '@/context/DataContext';
-import SolidArrowLeft from '@/public/icon/solidArrowLeft.svg';
 import { cn } from '@/services/classNames';
 
 import s from './Licensen.module.scss';
+
+import SolidArrowLeft from 'public/icon/solidArrowLeft.svg';
 
 export const Licensen = () => {
 	const { licensen } = useDataContext();

@@ -1,5 +1,5 @@
 .item {
-	background-image: url('../../public/images/servicesCardBg.png');
+	background-image: url('/images/servicesCardBg.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -44,7 +44,7 @@
 	@media screen and (max-width: 600px) {
 		&::after {
 			align-items: center;
-			background-image: url('../../public/images/arrow-right.svg');
+			background-image: url('/images/arrow-right.svg');
 			background-repeat: no-repeat;
 			background-size: contain;
 			content: '';
