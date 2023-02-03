@@ -46,6 +46,10 @@
 		justify-content: start;
 		width: auto;
 	}
+	@include respondBelow($breakpointHeader) {
+		position: relative;
+		z-index: 1002;
+	}
 }
 
 .LogoLink:hover .LogoPicture {

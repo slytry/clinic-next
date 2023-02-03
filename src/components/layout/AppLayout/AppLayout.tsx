@@ -1,7 +1,8 @@
 import { IBM_Plex_Sans, Roboto } from '@next/font/google';
 import Head from 'next/head';
-import { type PropsWithChildren } from 'react';
+import {type PropsWithChildren, useState} from 'react';
 
+import ModalCustom from "@/layout/ModalCustom/ModalCustom";
 import { cn } from '@/services/classNames';
 
 import { Burger } from '../Burger';
@@ -23,21 +24,21 @@ const fontRoboto = Roboto({
 export function AppLayout({
 	children,
 }: PropsWithChildren<Record<string, unknown>>) {
+	const [isOpenModal, setOpenModal] = useState(false);
+
 	return (
 		<>
 			<Head>
 				<title>Семья</title>
 			</Head>
-
-			<Burger />
-
 			<div
 				className={cn(s.AppLayout, fontIBM.variable, fontRoboto.variable)}
 				id="page-wrap"
 				style={{ height: '100%', overflow: 'auto' }}
 			>
-				<Header />
+				<Header isOpenModal={isOpenModal} setOpenModal={setOpenModal} />
 				{children}
+				<ModalCustom isOpenModal={isOpenModal} setOpenModal={setOpenModal}/>
 			</div>
 		</>
 	);

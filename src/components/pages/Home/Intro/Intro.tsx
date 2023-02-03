@@ -1,4 +1,5 @@
 import cn from 'classnames/bind';
+import introGBg from 'public/bg/introBg.png';
 import {
 	type Dispatch,
 	type PropsWithChildren,
@@ -6,7 +7,6 @@ import {
 	useState,
 } from 'react';
 
-import introGBg from 'public/bg/introBg.jpg';
 
 import { BgImage } from '@/components/base/BgImage';
 import { Heading } from '@/components/base/Heading';
