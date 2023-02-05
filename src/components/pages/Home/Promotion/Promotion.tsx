@@ -8,9 +8,8 @@ import { Region } from '@/components/base/Region';
 import { getMediaUrl } from '@/lib/api/getUrl';
 
 import { useDataContext } from '@/context/DataContext';
-import { cn } from '@/services/classNames';
 
-import s from './Promotion.module.scss';
+import cx from './index.module.scss';
 
 export const Promotion = () => {
 	const { promotion } = useDataContext();
@@ -63,9 +62,9 @@ export const Promotion = () => {
 	);
 
 	return (
-		<Region className={cn(s.promotion)} id="promo">
-			<Heading className={s.heading}>Новости и акции</Heading>
-			<div className={s.navigationWrapper}>
+		<Region className={cx('promotion')} id="promo">
+			<Heading className={cx('heading')}>Новости и акции</Heading>
+			<div className={cx('navigationWrapper')}>
 				<div ref={sliderRef} className="keen-slider">
 					{promotion.map(({ id, attributes }) => (
 						<div key={id} className="keen-slider__slide number-slide1">
@@ -99,7 +98,7 @@ export const Promotion = () => {
 					</>
 				)}
 				{loaded && instanceRef.current && (
-					<div className={s.dots}>
+					<div className={cx('dots')}>
 						{[
 							...Array(instanceRef.current.track.details.slides.length).keys(),
 						].map((idx) => (
@@ -108,7 +107,9 @@ export const Promotion = () => {
 								onClick={() => {
 									instanceRef.current?.moveToIdx(idx);
 								}}
-								className={cn(s.dot, currentSlide === idx ? s.active : '')}
+								className={cx('dot', {
+									active: currentSlide === idx,
+								})}
 							></button>
 						))}
 					</div>
@@ -120,10 +121,15 @@ export const Promotion = () => {
 
 function Arrow(props: { left?: boolean; onClick: (e: any) => void }) {
 	return (
-		<span className={cn(s.arrowWrap, props.left ? s.arrowLeft : s.arrowRight)}>
+		<span
+			className={cx('arrow', {
+				arrowLeft: props.left,
+				arrowRight: !props.left,
+			})}
+		>
 			<svg
 				onClick={props.onClick}
-				className={cn(s.arrow)}
+				className={cx('arrow')}
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
 			>

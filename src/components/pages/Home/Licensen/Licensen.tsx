@@ -8,9 +8,8 @@ import { Region } from '@/components/base/Region';
 import { getMediaUrl } from '@/lib/api/getUrl';
 
 import { useDataContext } from '@/context/DataContext';
-import { cn } from '@/services/classNames';
 
-import s from './Licensen.module.scss';
+import cx from './index.module.scss';
 
 import SolidArrowLeft from 'public/icon/solidArrowLeft.svg';
 
@@ -78,9 +77,9 @@ export const Licensen = () => {
 	);
 
 	return (
-		<Region className={cn(s.licensen)}>
-			<Heading className={s.heading}>Лицензии</Heading>
-			<div className={s.navigationWrapper}>
+		<Region className={cx('licensen')}>
+			<Heading className={cx('heading')}>Лицензии</Heading>
+			<div className={cx('navigationWrapper')}>
 				<div ref={sliderRef} className="keen-slider">
 					{licensen.map(({ id, attributes }) => (
 						<div key={id} className="keen-slider__slide number-slide1">
@@ -99,7 +98,7 @@ export const Licensen = () => {
 				</div>
 			</div>
 			{loaded && instanceRef.current && (
-				<div className={s.dots}>
+				<div className={cx('dots')}>
 					<Arrow
 						left
 						onClick={(e: any) =>
@@ -114,7 +113,9 @@ export const Licensen = () => {
 							onClick={() => {
 								instanceRef.current?.moveToIdx(idx);
 							}}
-							className={cn(s.dot, currentSlide === idx ? s.active : '')}
+							className={cx('dot', {
+								active: currentSlide === idx,
+							})}
 						></button>
 					))}
 					<Arrow
@@ -132,7 +133,10 @@ function Arrow(props: { left?: boolean; onClick: (e: any) => void }) {
 	return (
 		<SolidArrowLeft
 			onClick={props.onClick}
-			className={cn(s.arrow, props.left ? s.arrowLeft : s.arrowRight)}
+			className={cx('arrow', {
+				arrowLeft: props.left,
+				arrowRight: !props.left,
+			})}
 		/>
 	);
 }

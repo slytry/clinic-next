@@ -2,27 +2,21 @@ import footerBackgroundMax from 'public/bg/footerBackgroundMax.png';
 
 import { BgImage } from '@/components/base/BgImage/BgImage';
 
-import s from './Footer.module.scss';
+import cx from './index.module.scss';
 
 export const Footer = () => (
-	<footer className={s.footer}>
+	<footer className={cx('footer')}>
 		<BgImage src={footerBackgroundMax} alt="Синие фигуры" />
 
-		<ul className={s.list}>
-			<li className={s.listItem}>
-				<a href="#contacts" className={s.link}>
-					Контакты
-				</a>
+		<ul className={cx('list')}>
+			<li className={cx('listItem')}>
+				<a href="#contacts">Контакты</a>
 			</li>
-			<li className={s.listItem}>
-				<a href="" className={s.link}>
-					Вакансии
-				</a>
+			<li className={cx('listItem')}>
+				<a href="">Вакансии</a>
 			</li>
-			<li className={s.listItem}>
-				<a href="" className={s.link}>
-					Запись на прием
-				</a>
+			<li className={cx('listItem')}>
+				<a href="">Запись на прием</a>
 			</li>
 		</ul>
 	</footer>

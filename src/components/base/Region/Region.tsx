@@ -9,9 +9,8 @@ import {
 	HeadingIdContext,
 	HeadingLevelContext,
 } from '@/context/HeadingContext';
-import { cn } from '@/services/classNames';
 
-import s from './Region.module.scss';
+import cx from './index.module.scss';
 
 export interface RegionProps extends HTMLAttributes<HTMLDivElement> {
 	Tag?: 'main' | 'section';
@@ -39,9 +38,8 @@ export function Region({
 		<HeadingIdContext.Provider value={internalId}>
 			<HeadingLevelContext.Provider value={nextLevel}>
 				<Tag
-					className={cn(
-						Tag === 'section' && s.Region,
-						withContainer && s.container,
+					className={cx(
+						{ Root: Tag === 'section', Container: withContainer },
 						className
 					)}
 					{...props}

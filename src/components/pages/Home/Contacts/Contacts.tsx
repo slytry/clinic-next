@@ -3,7 +3,7 @@ import { Region } from '@/components/base/Region';
 
 import { useDataContext } from '@/context/DataContext';
 
-import s from './Contacts.module.scss';
+import cx from './index.module.scss';
 
 export const Contacts = () => {
 	const {
@@ -11,7 +11,7 @@ export const Contacts = () => {
 	} = useDataContext();
 
 	return (
-		<Region id="contacts" className={s.contacts} withContainer>
+		<Region id="contacts" className={cx('Root')} withContainer>
 			<Heading>Контакты</Heading>
 			<Region>
 				<Heading>Наш адрес:</Heading>

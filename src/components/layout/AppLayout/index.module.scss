@@ -1,0 +1,8 @@
+.Root {
+	background: var(--bg);
+	color: var(--alpha);
+	font-family: var(--next-font-IBM);
+	min-height: 100vh;
+	padding-top: $layoutTopPadding;
+	position: relative;
+}

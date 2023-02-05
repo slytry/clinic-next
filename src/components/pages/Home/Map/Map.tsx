@@ -1,11 +1,7 @@
-import cn from 'classnames/bind';
-
 import { Heading } from '@/components/base/Heading';
 import { Region } from '@/components/base/Region';
 
-import styles from './Map.module.scss';
-
-const cx = cn.bind(styles);
+import cx from './index.module.scss';
 
 export const Map = () => (
 	<Region className={cx('Map')}>

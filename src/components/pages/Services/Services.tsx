@@ -1,17 +1,13 @@
-import cn from 'classnames/bind';
-
-import { Card } from '@/base/Card';
-import { Heading } from '@/base/Heading';
-import { Region } from '@/base/Region';
+import { Card } from '@/components/base/Card';
+import { Heading } from '@/components/base/Heading';
+import { Region } from '@/components/base/Region';
 
 import { SERVICES_LIST, TITLE } from './constants';
 
-import styles from './index.module.scss';
-
-const cx = cn.bind(styles);
+import cx from './index.module.scss';
 
 export const Services = () => (
-	<main className={cx('main', 'container')}>
+	<main className={cx('Root', 'container')}>
 		<Region className={cx('title')}>
 			<Heading className={cx('title__head')}> {TITLE.first}</Heading>
 			<Heading className={cx('title__head')}> {TITLE.second}</Heading>

@@ -1,11 +1,8 @@
-import cn from 'classnames/bind';
 import { slide as Menu } from 'react-burger-menu';
 
 import { LinkIntoView } from '../../base/LinkIntoView/LinkIntoView';
 
-import styles from './Burger.module.scss';
-
-const cx = cn.bind(styles);
+import cx from './index.module.scss';
 
 export const Burger = () => (
 	<Menu

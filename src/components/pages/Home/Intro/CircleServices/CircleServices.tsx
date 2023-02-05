@@ -1,10 +1,9 @@
-import Image from 'next/image';
 import { useState } from 'react';
 
 import { Circle, CircleWithIcon } from '../Circle';
 import { services } from '../constants';
 
-import s from './index.module.scss';
+import cx from './index.module.scss';
 
 export const CircleServices = () => {
 	const [uslugi, setUslugi] = useState(services);
@@ -14,8 +13,8 @@ export const CircleServices = () => {
 	};
 
 	return (
-		<div className={s.Root}>
-			<ul className={s.circle}>
+		<div className={cx('Root')}>
+			<ul className={cx('circle')}>
 				{uslugi.map((item) => {
 					if (item?.subItems) {
 						return (

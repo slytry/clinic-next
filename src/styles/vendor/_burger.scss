@@ -1,6 +1,7 @@
 /* stylelint-disable selector-class-pattern */
 /* stylelint-disable selector-max-id */
-@use '../abstract/hovers' as *;
+@use '../abstract' as *;
+
 /* Position and sizing of clickable cross button */
 .bm-burger-button {
 	height: 24px;
@@ -20,6 +21,7 @@
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
 	background: #373a47;
+	border-radius: 4px;
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -49,7 +51,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-	background: #373a47;
+	background: $bgBlue;
 	display: grid;
 	font-size: 1.15em;
 }

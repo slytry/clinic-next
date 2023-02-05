@@ -1,22 +1,14 @@
-import cn from 'classnames/bind';
 import Link from 'next/link';
 
 import { LinkIntoView } from '@/components/base/LinkIntoView';
+import { LogoWithName } from '@/components/shared/LogoWithName';
+import { ModalWithPhone } from '@/components/shared/ModalWithPhone';
 
-import styles from './Header.module.scss';
-
-import Logo from '/public/icon/headerLogo.svg';
-
-const cx = cn.bind(styles);
+import cx from './index.module.scss';
 
 export const Header = () => (
 	<header className={cx('Header')}>
-		<Link href="/" className={cx('LogoLink')}>
-			<Logo className={cx('LogoPicture')} alt="logo" />
-
-			<p className={cx('LogoText')}>Медицинский центр</p>
-			<p className={cx('LogoTextMob')}>Диагностический медицинский центр</p>
-		</Link>
+		<LogoWithName />
 
 		<LinkIntoView href="#promo" className={cx('News')}>
 			Новости и акции
@@ -26,11 +18,6 @@ export const Header = () => (
 			Контакты
 		</LinkIntoView>
 
-		<div className={cx('Number')}>
-			<Link href="tel:+79256553328" className={cx('Phone')}>
-				+7-925-655-33-28
-			</Link>
-			<button className={cx('Button')}>Запись на прием</button>
-		</div>
+		<ModalWithPhone />
 	</header>
 );

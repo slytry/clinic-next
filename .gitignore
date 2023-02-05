@@ -5,6 +5,7 @@ tsconfig.tsbuildinfo
 
 # dependencies
 **/node_modules
+**/cch-template
 /.pnp
 .pnp.js
 

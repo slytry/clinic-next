@@ -4,9 +4,8 @@ import {
 	HeadingIdContext,
 	HeadingLevelContext,
 } from '@/context/HeadingContext';
-import { cn } from '@/services/classNames';
 
-import s from './Heading.module.scss';
+import cx from './index.module.scss';
 
 type HeadingProps = HTMLAttributes<HTMLHeadingElement> & {
 	level?: number | 'auto';
@@ -37,7 +36,7 @@ export function Heading({ level = 'auto', className, ...props }: HeadingProps) {
 	}
 
 	const actualLevel = level === 'auto' ? headingLevel : level;
-	const classNameInner = cn(s.Heading, className);
+	const classNameInner = cx('Heading', className);
 	if (actualLevel <= 6) {
 		return React.createElement(`h${actualLevel}`, {
 			...props,

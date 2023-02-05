@@ -1,9 +1,6 @@
-import cn from 'classnames/bind';
 import Image from 'next/image';
 
-import s from './index.module.scss';
-
-const cx = cn.bind(s);
+import cx from './index.module.scss';
 
 export const Circle = ({
 	imgSrc,
