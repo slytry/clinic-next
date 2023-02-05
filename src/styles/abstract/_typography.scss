@@ -1,8 +1,6 @@
-@use 'sass:list';
-@use 'sass:math';
-@use 'sass:meta';
 @use '../mixins/media' as *;
 @use '../functions/typoHelpers' as *;
+@use './variables' as *;
 
 //===========================================
 //============= variables ===================

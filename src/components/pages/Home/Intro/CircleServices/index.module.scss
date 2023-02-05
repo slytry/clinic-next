@@ -18,16 +18,16 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 
-	@include respond-below(1050px) {
+	@include respondBelow(1050px) {
 		@include distribute-on-circle(6, 30rem, 5rem);
 	}
-	@include respond-below(768px) {
+	@include respondBelow(768px) {
 		@include distribute-on-circle(6, 25rem, 3.5rem);
 	}
-	@include respond-below(580px) {
+	@include respondBelow(580px) {
 		@include distribute-on-circle(6, 22rem, 2.5rem);
 	}
-	@include respond-below(400px) {
+	@include respondBelow(400px) {
 		@include distribute-on-circle(6, 18rem, 2.2rem);
 	}
 }
