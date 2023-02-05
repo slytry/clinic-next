@@ -6,6 +6,13 @@
 	box-sizing: border-box;
 }
 
+/* reset */
+button,
+fieldset,
+input {
+	all: unset;
+}
+
 /* Remove default margin */
 body,
 h1,

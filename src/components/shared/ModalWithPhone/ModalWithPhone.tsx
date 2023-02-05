@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 import { Dialog, DialogContent, DialogTrigger } from '@/components/base/Dialog';
 
@@ -18,21 +18,30 @@ const ModalWithPhone = ({ className }: ModalWithPhoneProps) => {
 				+7-925-655-33-28
 			</Link>
 
-			<Dialog>
-				<DialogTrigger asChild>
-					<button className={cx('Button')}>Запись на прием</button>
-				</DialogTrigger>
-				<DialogContent>
-					<MakeAnAppointment />
-				</DialogContent>
-			</Dialog>
+			<MakeAnAppointmentDialog />
 		</div>
 	);
 };
 
 export { ModalWithPhone };
 
-export const MakeAnAppointment = () => (
+export const MakeAnAppointmentDialog = () => {
+	// eslint-disable-next-line no-promise-executor-return
+	const wait = async () => new Promise((resolve) => setTimeout(resolve, 1000));
+	const [open, setOpen] = useState(false);
+	return (
+		<Dialog>
+			<DialogTrigger asChild>
+				<button className={cx('Button')}>Запись на прием</button>
+			</DialogTrigger>
+			<DialogContent>
+				<MakeAnAppointmentContent />
+			</DialogContent>
+		</Dialog>
+	);
+};
+
+const MakeAnAppointmentContent = () => (
 	<div>
 		<fieldset className="Fieldset">
 			<label className="Label" htmlFor="name">

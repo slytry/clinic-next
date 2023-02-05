@@ -1,4 +1,4 @@
-@use './transition' as *;
+@use '../mixins/transition' as *;
 
 @mixin scaleHover($scale: 1.1) {
 	@include transition(transform);

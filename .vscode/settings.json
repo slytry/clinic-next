@@ -2,10 +2,8 @@
 	//===========================================
 	//============= Editor ======================
 	//===========================================
-	"editor.wordSeparators": "`~!@#$%^&*()_-=+[{]}\\|;:'\",.<>/?",
 	"editor.detectIndentation": false,
 	"editor.insertSpaces": false,
-	"editor.linkedEditing": false, // better Auto Rename Tag ext
 
 	//===========================================
 	//============= Linters =====================

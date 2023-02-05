@@ -22,8 +22,8 @@ type RefDivOrUndefined = Ref<HTMLDivElement> | undefined;
 export const DialogContent = forwardRef(
 	({ children, ...props }: DialogProps, forwardedRef: RefDivOrUndefined) => (
 		<Portal>
-			<Overlay />
-			<Content {...props} ref={forwardedRef}>
+			<Overlay className={cx('Overlay')} />
+			<Content {...props} ref={forwardedRef} className={cx('Content')}>
 				{children}
 				<Close aria-label="Close">
 					<CrossIcon />

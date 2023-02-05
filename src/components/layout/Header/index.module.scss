@@ -19,7 +19,7 @@
 	width: 100%;
 	z-index: 1;
 
-	@include respondAbove($breakpointHeader) {
+	@include respondAbove($breakpointBurger) {
 		border-bottom: 16px solid #0072ba29;
 		gap: 4%;
 		padding-inline: rem(50);
@@ -27,8 +27,7 @@
 }
 
 .Contacts,
-.News,
-.Phone {
+.News {
 	@include text1(400);
 	@include scaleHover;
 }

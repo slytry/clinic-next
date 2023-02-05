@@ -4,9 +4,14 @@
 	display: flex;
 	flex-direction: column;
 
-	@include respondBelow($breakpointHeader) {
+	@include respondBelow($breakpointBurger) {
 		display: none;
 	}
+}
+
+.Phone {
+	@include text1(400);
+	@include scaleHover;
 }
 
 .Button {

@@ -6,7 +6,7 @@
 	text-align: center;
 	width: 100%;
 
-	@include respondAbove($breakpointHeader) {
+	@include respondAbove($breakpointBurger) {
 		flex-direction: column;
 		justify-content: start;
 		width: auto;
@@ -22,7 +22,7 @@
 .LogoPicture {
 	@include transition(transform);
 	// @include scaleHover;
-	// @include respondAbove($breakpointHeader) {
+	// @include respondAbove($breakpointBurger) {
 	// 	height: rem(100);
 	// 	width: rem(100);
 	// }
@@ -35,7 +35,7 @@
 	font-weight: 600;
 	padding: rem(4);
 
-	@include respondBelow($breakpointHeader) {
+	@include respondBelow($breakpointBurger) {
 		display: none;
 	}
 }

@@ -1,8 +1,8 @@
-import Link from 'next/link';
-
 import { LinkIntoView } from '@/components/base/LinkIntoView';
 import { LogoWithName } from '@/components/shared/LogoWithName';
 import { ModalWithPhone } from '@/components/shared/ModalWithPhone';
+
+import { Burger } from './Burger';
 
 import cx from './index.module.scss';
 
@@ -19,5 +19,7 @@ export const Header = () => (
 		</LinkIntoView>
 
 		<ModalWithPhone />
+
+		<Burger />
 	</header>
 );

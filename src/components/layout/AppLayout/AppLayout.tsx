@@ -2,8 +2,8 @@ import { IBM_Plex_Sans, Roboto } from '@next/font/google';
 import Head from 'next/head';
 import { type PropsWithChildren } from 'react';
 
-import { Burger } from '../Burger';
 import { Header } from '../Header';
+import { Burger } from '../Header/Burger';
 
 import cx from './index.module.scss';
 
@@ -27,12 +27,9 @@ export function AppLayout({
 				<title>Семья</title>
 			</Head>
 
-			<Burger />
-
 			<div
 				className={cx('Root', fontIBM.variable, fontRoboto.variable)}
 				id="page-wrap"
-				style={{ height: '100%', overflow: 'auto' }}
 			>
 				<Header />
 				{children}

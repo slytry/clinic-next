@@ -122,7 +122,7 @@ export const Promotion = () => {
 function Arrow(props: { left?: boolean; onClick: (e: any) => void }) {
 	return (
 		<span
-			className={cx('arrow', {
+			className={cx('arrowWrap', {
 				arrowLeft: props.left,
 				arrowRight: !props.left,
 			})}

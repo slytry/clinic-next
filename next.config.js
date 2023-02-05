@@ -13,7 +13,7 @@ const nextConfig = {
 	},
 	sassOptions: {
 		includePaths: [path.join(__dirname, '/src/styles/')],
-		additionalData: '@use "abstract" as *;',
+		additionalData: '@use "global" as *;',
 	},
 	webpack(config) {
 		bindClassnames(config);
