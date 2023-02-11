@@ -1,6 +1,7 @@
 import { Card } from '@/components/base/Card';
 import { Heading } from '@/components/base/Heading';
 import { Region } from '@/components/base/Region';
+import { ServicesList } from '@/components/base/ServicesList';
 
 import { SERVICES_LIST, TITLE } from './constants';
 
@@ -14,12 +15,6 @@ export const Services = () => (
 			<hr className={cx('hr')} />
 			<hr className={cx('hr')} />
 		</Region>
-		<Region className={cx('services')}>
-			<div className={cx('services__list')}>
-				{SERVICES_LIST.map((elem) => (
-					<Card key={elem.href} href={elem.href} descr={elem.link} />
-				))}
-			</div>
-		</Region>
+		<ServicesList />
 	</main>
 );
