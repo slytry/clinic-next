@@ -109,3 +109,20 @@
     }
   }
 }
+
+.ServiceTitle {
+  align-items: center;
+  color: $dark;
+  display: flex;
+  flex-direction: column;
+  font-size: rem(38);
+  font-weight: 600;
+  line-height: 1.2;
+  padding-bottom: rem(36);
+  padding-top: rem(36);
+
+  @media screen and (max-width: 414px) {
+    font-size: rem(30);
+    text-align: center;
+  }
+}

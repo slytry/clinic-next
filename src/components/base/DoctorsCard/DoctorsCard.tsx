@@ -5,7 +5,11 @@ import cx from './index.module.scss';
 
 interface DoctorsCardProps {
 	img: string;
-	grade: string;
+	grade: {
+		right: string;
+		left: string;
+	};
+	age: number;
 	post: string;
 	skills: string;
 	methods: string;
@@ -21,6 +25,7 @@ export const DoctorsCard = ({
 	skills,
 	methods,
 	education,
+	age,
 }: DoctorsCardProps) => (
 	<div className={cx('cards__item')}>
 		<div className={cx('cards__picture')}>
@@ -30,7 +35,8 @@ export const DoctorsCard = ({
 		<div className={cx('cards__text')}>
 			<div className={cx('cards__text-blur')}></div>
 			<p className={cx('cards__text-desc', 'cards__text-desc--heading')}>
-				{parse(grade)}
+				{parse(grade.left)}
+				<span className={cx('whiteTextBold')}>{age}</span> {parse(grade.right)}
 			</p>
 			<p
 				className={cx(

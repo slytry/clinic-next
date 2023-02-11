@@ -9,6 +9,11 @@ import { HEADING } from './constants/constants';
 
 import cx from './index.module.scss';
 
+const TITLE = 'Услуги гинекологии';
+const BUTTON = 'Прескурант';
+const BUTTON_TEXT = 'Подробнее...';
+const SERVICES_LIST = 'Ведущие специалисты';
+
 export const Reception = () => (
 	<main className={cx('main')}>
 		<Region className={cx('title')}>
@@ -18,17 +23,17 @@ export const Reception = () => (
 			<p className={cx('title__desc')}>{parse(HEADING.descr)}</p>
 
 			<a href="/service" className={cx('title__btn', 'button')}>
-				Прескурант{' '}
-				<span className={cx('title__btn-subtext')}>Подробнее...</span>
+				{BUTTON} <span className={cx('title__btn-subtext')}>{BUTTON_TEXT}</span>
 			</a>
 		</Region>
 
 		<section className={cx('specialists')}>
 			<h2 className={cx('title__head', 'specialists__head')}>
-				Ведущие специалисты
+				{SERVICES_LIST}
 			</h2>
 			<DoctorCardsList />
 		</section>
+		<h2 className={cx('ServiceTitle')}>{TITLE}</h2>
 		<ServicesList />
 	</main>
 );

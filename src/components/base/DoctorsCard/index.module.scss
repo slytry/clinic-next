@@ -17,6 +17,16 @@
   }
 }
 
+.whiteTextBold {
+  color: $light;
+  font-size: rem(30);
+  font-weight: 600;
+
+  @media screen and (max-width: 768px) {
+    font-size: rem(40);
+  }
+}
+
 
 .cards__picture {
   height: rem(400);
@@ -208,4 +218,8 @@
   @media screen and (max-width: 768px) {
     font-size: rem(13);
   }
+}
+
+.whiteText {
+  color: $light !important;
 }
