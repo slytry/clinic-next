@@ -1,4 +1,3 @@
-import cn from 'classnames/bind';
 import parse from 'html-react-parser';
 
 import { DoctorCardsList } from '@/components/base/DoctorCardsList';
@@ -8,9 +7,7 @@ import { ServicesList } from '@/components/base/ServicesList';
 
 import { HEADING } from './constants/constants';
 
-import styles from './index.module.scss';
-
-const cx = cn.bind(styles);
+import cx from './index.module.scss';
 
 export const Reception = () => (
 	<main className={cx('main')}>
