@@ -1,0 +1,91 @@
+.Modal {
+	align-items: center;
+	background: hsl(200deg, 73%, 73%);
+	border-radius: 2px;
+	bottom: auto;
+	box-shadow: 0 0 10px #695a5a;
+
+	display: flex;
+	height: 90%;
+	justify-content: center;
+	left: 0;
+	right: auto;
+	top: 0;
+	transform: translate(12%, 6%);
+	width: 80%;
+
+	@include respondBelow($breakpointHeader) {
+		height: 100%;
+		transform: translate(0%, 0%);
+		width: 100%;
+	}
+}
+
+.Form {
+	max-width: 100%;
+	text-align: center;
+	width: 300px;
+
+	h2 {
+		color: #fff;
+		font-size: 24px;
+		font-weight: 800;
+	}
+
+	&Field {
+		margin-top: 17px;
+	}
+
+	&FieldLabel {
+		color: #000;
+		font-size: 18px;
+		font-weight: 800;
+		letter-spacing: 0.03em;
+	}
+
+	input,
+	select {
+		background: #f5f0eb;
+		border: 1px solid #fdfeff;
+		border-radius: 16px;
+		display: inline-block;
+		height: 39px;
+		outline: none;
+		padding: 7px 10px;
+		width: 100%;
+	}
+
+	button {
+		background: linear-gradient(180deg, #0584d7 0%, #3abdf5 100%);
+		border: 2px solid #fdfeff;
+		border-radius: 35px;
+		color: $light;
+		cursor: pointer;
+		display: block;
+		font-size: 24px;
+		font-weight: 700;
+		height: 70px;
+		margin: 64px auto 12px;
+		outline: none;
+		text-align: center;
+		transition: all 0.3s ease;
+		width: 272px;
+
+		&:hover {
+			border: 2px solid #0584d7;
+		}
+	}
+
+	a {
+		font-size: 20px;
+		font-weight: 700;
+		opacity: 0.8;
+		padding: 5px 10px;
+		text-align: center;
+		transition: opacity 0.3s ease;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
