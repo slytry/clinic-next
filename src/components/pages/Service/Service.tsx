@@ -5,7 +5,7 @@ import cx from './index.module.scss';
 
 export const Service = () => (
 	<>
-		<Region Tag="main" className={cx('main', ' container')}>
+		<Region Tag="main" className={cx('Root')}>
 			<section className={cx('title')}>
 				<h2 className={cx('title__head')}>Гинекология</h2>
 				<hr className={cx('hr')} />

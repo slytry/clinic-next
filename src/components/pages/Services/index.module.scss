@@ -1,3 +1,7 @@
+.Root {
+	@extend %container;
+}
+
 .main {
 	background-color: #f5f0eb;
 	background-image: url('/images/bigbg.png');
