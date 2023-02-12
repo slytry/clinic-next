@@ -1,4 +1,5 @@
 import parse from 'html-react-parser';
+import Link from 'next/link';
 
 import { DoctorCardsList } from '@/components/base/DoctorCardsList';
 import { Heading } from '@/components/base/Heading';
@@ -22,9 +23,9 @@ export const Reception = () => (
 			<hr className={cx('hr')} />
 			<p className={cx('title__desc')}>{parse(HEADING.descr)}</p>
 
-			<a href="/service" className={cx('title__btn', 'button')}>
+			<Link href="/service" className={cx('title__btn', 'button')}>
 				{BUTTON} <span className={cx('title__btn-subtext')}>{BUTTON_TEXT}</span>
-			</a>
+			</Link>
 		</Region>
 
 		<section className={cx('specialists')}>

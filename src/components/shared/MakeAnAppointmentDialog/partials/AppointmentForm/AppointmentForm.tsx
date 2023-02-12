@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import { zodResolver } from '@hookform/resolvers/zod';
 import { type SubmitHandler, useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -29,7 +30,7 @@ export const AppointmentForm = ({ className }: FormProps) => {
 	const { handleSubmit } = methods;
 
 	const onSubmit: SubmitHandler<ValidationSchema> = (data) => {
-		console.log(data);
+		alert(JSON.stringify(data));
 	};
 
 	const Array = ['momo', 'katara', 'appa'];

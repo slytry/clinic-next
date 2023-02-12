@@ -16,7 +16,7 @@ export function AppLayout({
 			</Head>
 
 			<div className={cx('Root')} id="page-wrap">
-				<Burger />
+				{/* <Burger /> */}
 				<Header />
 				{children}
 			</div>

@@ -1,6 +1,7 @@
 $introBottomGap: 20px;
 
 .Intro {
+	background-image: url('/bg/introBg.jpg');
 	border-bottom: $introBottomGap solid $light;
 	min-height: calc(100vh - #{$layoutTopPadding} + #{$introBottomGap});
 

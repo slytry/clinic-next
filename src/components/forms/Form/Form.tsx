@@ -14,11 +14,14 @@ export function Form<TFieldValues extends FieldValues>({
 	children,
 	className,
 	methods,
+	...props
 }: FormProps<TFieldValues>) {
 	return (
 		// @ts-expect-error
 		<FormProvider {...methods}>
-			<form className={cx('Root', className)}>{children}</form>
+			<form className={cx('Root', className)} {...props}>
+				{children}
+			</form>
 		</FormProvider>
 	);
 }
