@@ -7,12 +7,12 @@ $spaceBars: $hamburgerWidth - $barHeight * 3;
 .Hamburger {
 	cursor: pointer;
 	height: 24px;
-	left: 30px;
 	position: fixed;
+	right: 30px;
 	top: 30px;
 	user-select: none;
 	width: $hamburgerWidth;
-	z-index: 4;
+	z-index: 9;
 	@media only screen and (min-width: $breakpointBurger) {
 		display: none;
 	}

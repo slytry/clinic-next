@@ -1,8 +1,7 @@
 import { LinkIntoView } from '@/components/base/LinkIntoView';
 import { LogoWithName } from '@/components/shared/LogoWithName';
-import { ModalWithPhone } from '@/components/shared/ModalWithPhone';
 
-import { Burger } from './Burger';
+import { MakeAnAppointmentDialog } from '../MakeAnAppointmentDialog';
 
 import cx from './index.module.scss';
 
@@ -18,8 +17,6 @@ export const Header = () => (
 			Контакты
 		</LinkIntoView>
 
-		<ModalWithPhone />
-
-		<Burger />
+		<MakeAnAppointmentDialog />
 	</header>
 );

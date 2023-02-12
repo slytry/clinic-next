@@ -34,6 +34,7 @@
 		"pnpm": ">=7.2"
 	},
 	"dependencies": {
+		"@hookform/resolvers": "^2.9.11",
 		"@next/font": "^13.1.1",
 		"@radix-ui/react-dialog": "^1.0.2",
 		"@radix-ui/react-icons": "^1.1.1",
@@ -51,8 +52,10 @@
 		"react": "^18.2.0",
 		"react-burger-menu": "^3.0.9",
 		"react-dom": "^18.2.0",
+		"react-hook-form": "^7.43.1",
 		"react-markdown": "^8.0.5",
-		"sharp": "^0.31.3"
+		"sharp": "^0.31.3",
+		"zod": "^3.20.6"
 	},
 	"devDependencies": {
 		"@ecomfe/class-names-loader": "^2.0.0",
