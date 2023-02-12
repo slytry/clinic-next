@@ -1,1 +1,39 @@
-export const g = 9;
+import parse from 'html-react-parser';
+
+import { DoctorCardsList } from '@/components/base/DoctorCardsList';
+import { Heading } from '@/components/base/Heading';
+import { Region } from '@/components/base/Region';
+import { ServicesList } from '@/components/base/ServicesList';
+
+import { HEADING } from './constants/constants';
+
+import cx from './index.module.scss';
+
+const TITLE = 'Услуги гинекологии';
+const BUTTON = 'Прескурант';
+const BUTTON_TEXT = 'Подробнее...';
+const SERVICES_LIST = 'Ведущие специалисты';
+
+export const Reception = () => (
+	<main className={cx('main')}>
+		<Region className={cx('title')}>
+			<Heading className={cx('title__head')}>{HEADING.title}</Heading>
+			<hr className={cx('hr')} />
+			<hr className={cx('hr')} />
+			<p className={cx('title__desc')}>{parse(HEADING.descr)}</p>
+
+			<a href="/service" className={cx('title__btn', 'button')}>
+				{BUTTON} <span className={cx('title__btn-subtext')}>{BUTTON_TEXT}</span>
+			</a>
+		</Region>
+
+		<section className={cx('specialists')}>
+			<h2 className={cx('title__head', 'specialists__head')}>
+				{SERVICES_LIST}
+			</h2>
+			<DoctorCardsList />
+		</section>
+		<h2 className={cx('ServiceTitle')}>{TITLE}</h2>
+		<ServicesList />
+	</main>
+);
