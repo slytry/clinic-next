@@ -6,6 +6,8 @@ import { Heading } from '@/components/base/Heading';
 import { Region } from '@/components/base/Region';
 import { ServicesList } from '@/components/base/ServicesList';
 
+import { SERVICES_LIST_SERVICE } from '../Services/constants';
+
 import { HEADING } from './constants/constants';
 
 import cx from './index.module.scss';
@@ -35,6 +37,6 @@ export const Reception = () => (
 			<DoctorCardsList />
 		</section>
 		<h2 className={cx('ServiceTitle')}>{TITLE}</h2>
-		<ServicesList />
+		<ServicesList arr={SERVICES_LIST_SERVICE} />
 	</main>
 );

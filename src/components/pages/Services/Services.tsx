@@ -1,4 +1,3 @@
-import { Card } from '@/components/base/Card';
 import { Heading } from '@/components/base/Heading';
 import { Region } from '@/components/base/Region';
 import { ServicesList } from '@/components/base/ServicesList';
@@ -15,6 +14,6 @@ export const Services = () => (
 			<hr className={cx('hr')} />
 			<hr className={cx('hr')} />
 		</Region>
-		<ServicesList />
+		<ServicesList arr={SERVICES_LIST} />
 	</main>
 );
