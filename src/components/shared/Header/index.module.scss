@@ -31,3 +31,10 @@
 	@include text1(400);
 	@include scaleHover;
 }
+
+.hide {
+	display: none;
+	@include respondAbove($breakpointBurger) {
+		display: block;
+	}
+}

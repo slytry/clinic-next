@@ -9,14 +9,14 @@ export const Header = () => (
 	<header className={cx('Header')}>
 		<LogoWithName />
 
-		<LinkIntoView href="#promo" className={cx('News')}>
+		<LinkIntoView href="#promo" className={cx('News', 'hide')}>
 			Новости и акции
 		</LinkIntoView>
 
-		<LinkIntoView href="#contacts" className={cx('Contacts')}>
+		<LinkIntoView href="#contacts" className={cx('Contacts', 'hide')}>
 			Контакты
 		</LinkIntoView>
 
-		<MakeAnAppointmentDialog />
+		<MakeAnAppointmentDialog className={cx('hide')} />
 	</header>
 );
