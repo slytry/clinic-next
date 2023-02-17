@@ -21,6 +21,7 @@
 
 .LogoPicture {
 	@include transition(transform);
+	flex-shrink: 0;
 	// @include scaleHover;
 	// @include respondAbove($breakpointBurger) {
 	// 	height: rem(100);
